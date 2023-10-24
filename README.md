@@ -2,6 +2,8 @@
 
 Generate unique project ideas for your data science portfolio based on your personal interests, know-how, and available timeframe using the power of OpenAI's models.
 
+Deployed on streamlit: https://drs-portfolio-project-generator.streamlit.app/
+
 ## Table of Contents
 
 - [Features](#features)
