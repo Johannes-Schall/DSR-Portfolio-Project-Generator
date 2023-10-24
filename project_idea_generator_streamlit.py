@@ -197,27 +197,26 @@ if st.button(f"Generate Project {idea_or_ideas}"):
         openai.api_key = user_api_key
         if not is_api_key_valid():
             st.error("The API key is not valid. Please enter a valid API key.")
-            st.stop()
+        else:
+            # Generating the project ideas
+            for project, tokens, brainstorm_dialogue in generate_project_idea(user_input_interest, 
+                                                                                user_input_knowhow, 
+                                                                                user_input_timeframe, 
+                                                                                user_input_number_ideas,
+                                                                                modeltype_brainstorm=modeltype_brainstorm,
+                                                                                modeltype_extract=modeltype_extract):
             
-        # Generating the project ideas
-        for project, tokens, brainstorm_dialogue in generate_project_idea(user_input_interest, 
-                                                                            user_input_knowhow, 
-                                                                            user_input_timeframe, 
-                                                                            user_input_number_ideas,
-                                                                            modeltype_brainstorm=modeltype_brainstorm,
-                                                                            modeltype_extract=modeltype_extract):
-        
-            # Printing the Project Ideas
-            st.subheader("Project Ideas")
-            st.write(f"**{project['Title']}**")
-            st.write(project["Description"])
-            st.write("")
-
-            with st.expander("Brainstorming Dialogue"):
-                st.write(brainstorm_dialogue)
+                # Printing the Project Ideas
+                st.subheader("Project Ideas")
+                st.write(f"**{project['Title']}**")
+                st.write(project["Description"])
                 st.write("")
 
-        # Tokens used
-        with st.expander("Tokens used"):
-            for modeltype, token in tokens.items():
-                st.write(f"{modeltype}: {token}")
+                with st.expander("Brainstorming Dialogue"):
+                    st.write(brainstorm_dialogue)
+                    st.write("")
+
+            # Tokens used
+            with st.expander("Tokens used"):
+                for modeltype, token in tokens.items():
+                    st.write(f"{modeltype}: {token}")
