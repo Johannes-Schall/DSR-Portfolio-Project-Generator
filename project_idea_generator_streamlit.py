@@ -216,6 +216,8 @@ if st.button(f"Generate Project {idea_or_ideas}"):
                     st.write(brainstorm_dialogue)
                     st.write("")
 
+                st.balloons()
+
             # Tokens used
             with st.expander("Tokens used"):
                 for modeltype, token in tokens.items():
