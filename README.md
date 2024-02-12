@@ -38,7 +38,7 @@ pip install streamlit openai
 3. Run the Streamlit app.
 
 ```bash
-streamlit run app.py
+streamlit run project_idea_generator_streamlit.py
 ```
 
 ## Usage
