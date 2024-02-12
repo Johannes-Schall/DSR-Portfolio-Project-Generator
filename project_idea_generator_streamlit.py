@@ -55,7 +55,7 @@ def extract_idea(dialogue, modeltype=None):
 def is_api_key_valid():
     try:
         response = openai.Completion.create(
-            engine="davinci",
+            engine="davinci-002",
             prompt="This is a test.",
             max_tokens=5
         )
@@ -222,3 +222,6 @@ if st.button(f"Generate Project {idea_or_ideas}"):
             with st.expander("Tokens used"):
                 for modeltype, token in tokens.items():
                     st.write(f"{modeltype}: {token}")
+
+
+# run on Windows & C:/Users/Johannes/anaconda3/envs/openai-api/python.exe -m streamlit run .\project_idea_generator_streamlit.py
