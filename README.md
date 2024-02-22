@@ -4,14 +4,6 @@ Generate unique project ideas for your data science portfolio based on your pers
 
 Deployed on streamlit: https://drs-portfolio-project-generator.streamlit.app/
 
-## Table of Contents
-
-- [Features](#features)
-- [Setup](#setup)
-- [Usage](#usage)
-- [Contribute](#contribute)
-- [License](#license)
-
 ## Features
 
 - Customizable prompts to get the most relevant project ideas for you.
@@ -50,10 +42,6 @@ streamlit run project_idea_generator_streamlit.py
 5. Click the "Generate Project Idea" button.
 6. Browse the generated project ideas and get inspired!
 7. Check out the tokens used and brainstorming dialogues for further insights.
-
-## Contribute
-
-Contributions are welcome! Please feel free to submit a Pull Request or open an Issue.
 
 ## License
 
